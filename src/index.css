@@ -1,0 +1,147 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: rgb(46, 46, 46);
+}
+
+.btn-primary{
+  background: rgb(50, 144, 252) !important;
+  border: none;
+  padding: 10px 0px;
+}
+
+hr{
+  margin-top: 4px;
+}
+
+.img-resp{
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.btn-menu{
+  width: 30px;
+  height: 30px;
+}
+
+.avatar{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.task-title{
+  margin-top: 15px;
+  margin-bottom: 0px;
+  font-weight: 700;
+}
+
+.welcome-user{
+  color: rgb(70, 70, 70);
+  margin-bottom: 0px;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.status-todo{
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5rem;
+}
+
+.status-todo .status{
+  padding: 5px 15px 5px 5px;
+  margin-left: 10px;
+}
+
+.status-todo .status span{
+  cursor: pointer;
+  font-weight: 400;
+  color: grey;
+}
+
+.status-active{
+  font-weight: 600 !important;
+  color: black !important;
+  padding-bottom: 10.3px;
+  border-bottom: 2px solid rgb(91, 179, 238);
+}
+
+.important-task{
+  color: rgb(80, 162, 255);
+}
+
+.badge-primary{
+  background: rgba(91, 179, 238, 0.212);
+  color: rgb(91, 179, 238) !important;
+  font-weight: 600 !important;
+  margin-right: 10px;
+} 
+
+.addNewTask {
+  font-size: 20px;
+  margin: 0px;
+  top: auto;
+  right: 20px;
+  bottom: 20px;
+  left: auto;
+  position: fixed;
+  background: rgb(91, 179, 238);
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  border: none;
+  color: white;
+  outline: none !important;
+} .addNewTask:hover{
+  background:rgb(0, 119, 255) ;
+}
+
+.title-add{
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.popup-content {
+  width: 100vw !important;
+  bottom: -10px;
+  top: auto;
+  position: fixed !important;
+  height: 400px;
+  padding: 20px !important;
+  border-radius: 10px;
+}
+
+.btn-delete{
+  background: none;
+  border: none;
+  outline: none !important;
+}
+
+.first-task-title{
+  text-align: center;
+  color: rgb(204, 204, 204);
+}
+
+.item {
+  position:relative;
+  padding-top:20px;
+  display:inline-block;
+}
+.notify-badge{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 23px;
+  top: 16px;
+  background:rgb(236, 44, 44);
+  text-align: center;
+  border-radius: 50px;
+  padding-top: 0.5px;
+  border: 1.5px solid white;
+  color:white;
+  font-size:11px;
+}
