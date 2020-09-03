@@ -3,7 +3,7 @@ import { todoReducerContext } from "../../hoc/todoReducerContext";
 import { TaskItem } from "./TaskItem";
 import { AddNewTask } from "./AddNewTask";
 
-export const TasksList = () => {
+export const TasksList = React.memo(() => {
   
   const { state, dispatch } = useContext(todoReducerContext);
 
@@ -31,4 +31,5 @@ export const TasksList = () => {
       <AddNewTask />
     </>
   );
-};
+} 
+)

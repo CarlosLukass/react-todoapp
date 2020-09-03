@@ -128,7 +128,7 @@ hr{
 
 .item {
   position:relative;
-  padding-top:20px;
+  padding-top:0px;
   display:inline-block;
 }
 .notify-badge{
@@ -136,7 +136,7 @@ hr{
   width: 20px;
   height: 20px;
   right: 23px;
-  top: 16px;
+  top: 0px;
   background:rgb(236, 44, 44);
   text-align: center;
   border-radius: 50px;
@@ -144,4 +144,22 @@ hr{
   border: 1.5px solid white;
   color:white;
   font-size:11px;
+}
+
+@media only screen and (min-width: 800px) {
+  
+  .popup-content {
+    width: 400px !important;
+    bottom: none !important;
+    top: none !important;
+    position: initial !important;
+    height: 300px;
+    padding: 20px !important;
+    border-radius: 10px;
+  }
+
+
+
+
+  
 }

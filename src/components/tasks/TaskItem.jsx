@@ -1,15 +1,15 @@
-import React from "react";
+import React,{useCallback} from "react";
 
-export const TaskItem = ({task, dispatch}) => {
+export const TaskItem = React.memo(({task, dispatch}) => {
   const {id, task:name, category} = task
 
-  const handleRemoveTask = () => {
+  const handleRemoveTask = useCallback(() => {
     const action = {
       type: 'delete',
       payload: id
     } 
     dispatch(action)
-  }
+  }, [id, dispatch])
 
   return (
     <>
@@ -30,4 +30,4 @@ export const TaskItem = ({task, dispatch}) => {
 
     </>
   );
-};
+})

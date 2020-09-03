@@ -2,36 +2,33 @@ import React, { useContext } from "react";
 import { useForm } from "../../hooks/useForm";
 import { todoReducerContext } from "../../hoc/todoReducerContext";
 import Popup from "reactjs-popup";
+import { useCallback } from "react";
 
-export const AddNewTask = () => {
+export const AddNewTask = React.memo(() => {
   const { dispatch } = useContext(todoReducerContext);
 
   const [formValue, handleInputChange, resetInput] = useForm({
-    id: '',
-    task: '',
-    status: '',
-    category: '',
-  })
+    id: "",
+    task: "",
+    status: "",
+    category: "",
+  });
 
-  const handleAddTask = () => {  
-
-    if(formValue.task.length >= 1){
+  const handleAddTask = useCallback(() => {
+    if (formValue.task.length >= 1) {
       const action = {
         type: "add",
         payload: {
           id: new Date().getTime(),
           task: formValue.task,
-          status: 'pending',
+          status: "pending",
           category: formValue.category,
         },
       };
       dispatch(action);
-      resetInput()
+      resetInput();
     }
-
-  };
-
-  
+  }, [resetInput, dispatch, formValue])
 
   return (
     <Popup
@@ -40,7 +37,7 @@ export const AddNewTask = () => {
       closeOnDocumentClick
     >
       {(close) => (
-        <div className="addNewTaskForm">
+        <div>
           <h2 className="title-add">Add New Task</h2>
           <hr />
           <form onSubmit={handleAddTask}>
@@ -50,15 +47,20 @@ export const AddNewTask = () => {
               type="text"
               placeholder="Buy something..."
               value={formValue.task}
-              autoComplete='false'
+              autoComplete="false"
               onChange={handleInputChange}
             />
 
-            <select onChange={handleInputChange} name="category" value={formValue.category} className="form-control mt-2" id="">
-              <option value="normal" >Normal</option>
+            <select
+              onChange={handleInputChange}
+              name="category"
+              value={formValue.category}
+              className="form-control mt-2"
+              id=""
+            >
+              <option value="normal">Normal</option>
               <option value="important">Important</option>
             </select>
-
 
             <button
               type="submit"
@@ -76,4 +78,4 @@ export const AddNewTask = () => {
       )}
     </Popup>
   );
-};
+})
